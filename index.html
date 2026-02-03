@@ -14,27 +14,54 @@
             list-style-type: none; /* Removes bullet points */
             margin: 0;
             padding: 0;
-            background-color: #F0F0F0; /* Dark grey background */
+            border-bottom: 2px solid #5D0E18;
             overflow: hidden;
         }
 
         nav li {
             float: left; /* Makes components sit side-by-side */
         }
-
+         
+        /* 2. THE NORMAL STATE (White Background, Black Text) */
         nav li a {
             display: block;
-            color: white;
+            background-color: white;   /* Clean White */
+            color: black;              /* Sharp Black Text */
             text-align: center;
-            padding: 14px 16px;
-            text-decoration: none; /* Removes underline */
-            font-family: Arial, sans-serif;
+            padding: 20px 25px;
+            text-decoration: none;
+            font-family: 'Times New Roman', serif; 
+            font-size: 18px;
+            font-weight: bold;         /* Bold text looks better with this contrast */
+            
+            /* Smooth fade transition */
+            transition: background-color 0.3s, color 0.3s; 
         }
 
-        /* Change color when you hover over a link */
+        /* 3. THE HOVER STATE (Velvet Background, Gold Text) */
         nav li a:hover {
-            background-color: #111;
+            background-color: #5D0E18; /* Dark Velvet Red */
+            color: #D4AF37;            /* Metallic Gold Text */
         }
+
+
+        /* 3. THE NAME BLOCK (The "Logo") */
+        /* We use a specific class ".name-logo" for this */
+        nav li.name-logo a {
+            font-size: 32px;          /* Much bigger */
+            font-weight: bold;
+            padding: 10px 30px;       /* Slightly different padding to balance it */
+            letter-spacing: 2px;      /* Makes the name look elegant */
+        }
+
+        /* Hover for Name Block: STAYS White & Black */
+        /* We use !important to make sure this rule overrides the standard one */
+        nav li.name-logo a:hover {
+            background-color: white !important; 
+            color: black !important;
+            cursor: pointer;          /* Shows the clicking hand */
+        }
+         
     </style>
 
 </head>
